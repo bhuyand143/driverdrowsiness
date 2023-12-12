@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import './listing.css'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
@@ -18,6 +18,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import axios from "axios"
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -49,7 +50,6 @@ function createData(sessionID,eyecount,openmouth, status, datetime) {
 }
 
 
-
 const rows = [
   createData(1, 159, 6.0,'YES',24),
   createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
@@ -59,8 +59,19 @@ const rows = [
 ];
 
 const Listing = () => {
+  const [sessions, setsessions] = useState([]);
   useEffect(() => {
     //eslint-disable-next-line
+    const getSession  = async()=>{
+      try{
+        const res = await axios.get('http://localhost:8800/api/session')
+        setsessions(res.data);
+      }catch (error) {
+        console.log(error);
+      }
+    }
+    console.log("Heelo")
+    getSession();
   },[]);
   return (
     <div className="lisitingSection">
@@ -76,15 +87,15 @@ const Listing = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.sessionID}>
+            {sessions.map((session) => (
+              <StyledTableRow key={session._id}>
                 <StyledTableCell component="th" scope="row">
-                  {row.sessionID}
+                  {session._id}
                 </StyledTableCell>
-                <StyledTableCell align="right">{row.eyecount}</StyledTableCell>
-                <StyledTableCell align="right">{row.openmouth}</StyledTableCell>
-                <StyledTableCell align="right">{row.status}</StyledTableCell>
-                <StyledTableCell align="right">{row.datetime}</StyledTableCell>
+                <StyledTableCell align="right">{session.eyes_closed}</StyledTableCell>
+                <StyledTableCell align="right">{session.mouth_open}</StyledTableCell>
+                <StyledTableCell align="right">{session.status}</StyledTableCell>
+                <StyledTableCell align="right">{new Date(session.createdAt).toString()}</StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
