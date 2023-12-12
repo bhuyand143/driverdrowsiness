@@ -5,7 +5,7 @@ import { TbMessageCircle } from 'react-icons/tb'
 import { MdOutlineNotificationsNone } from 'react-icons/md'
 import { BsArrowRightShort, BsQuestionCircle } from 'react-icons/bs'
 import img from '../../../../Assets/saksham.jpg'
-import img2 from '../../../../Assets/images (2).png'
+import car from '../../../../Assets/dibyajyoticar.png'
 import video from '../../../../Assets/video.mp4'
 import axios from 'axios'
 import image from '../../../../Assets/drows.png'
@@ -42,7 +42,7 @@ const Top = () => {
       <div className="cardSection flex">
         <div className="rightCard flex">
           <h1>Start a Session!</h1>
-          <p>The world's fast growing industry today are natural made products!</p>
+          <p>Driving Safer, Staying Alert: A Drowsiness Detection Initiative</p>
 
           <div className="buttons flex">
             <button className="btn" onClick={handleStart}>Start!</button>
@@ -63,10 +63,10 @@ const Top = () => {
 
               <div className="flex">
                 <span>
-                  Today <br /> <small>4 Sessions</small>
+                  Today <br /> <small>2 Sessions</small>
                 </span>
                 <span>
-                  This Month <br /> <small>175 Sessions</small>
+                  This Month <br /> <small>138 Sessions</small>
                 </span>
               </div>
 
@@ -76,7 +76,7 @@ const Top = () => {
             </div>
 
             <div className="imgDiv">
-              <img src={img2} alt="Image Name" />
+              <img src={car} alt="Image Name" />
             </div>
             {/* We Shall use this card later */}
             <div className="sideBarCard">

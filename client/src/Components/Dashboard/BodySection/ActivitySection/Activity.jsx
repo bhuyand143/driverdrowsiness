@@ -12,7 +12,7 @@ const Activity = () => {
   return (
     <div className="activitySection">
       <div className="heading flex">
-        <h1>Recent Session</h1>
+        <h1>Recent Sessions</h1>
         <button className="btn flex">
           See All
           <BsArrowRightShort className="icon" />
@@ -23,54 +23,55 @@ const Activity = () => {
         <div className="singleCustomer flex">
           <img src={user} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Gilbert Hutapea</span>
-            <small>Ordered a new plant</small>
+            <span className="name">Session 1</span>
+            <small>View Details {'>>>'}</small>
           </div>
           <div className="duration">
-            2 min ago
+            15 mins ago
           </div>
         </div>
 
         <div className="singleCustomer flex">
           <img src={user1} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Gilbert Hutapea</span>
-            <small>Ordered a new plant</small>
+            <span className="name">Session 2</span>
+            <small>View Details {'>>>'}</small>
           </div>
           <div className="duration">
-            2 min ago
+            5 hours ago
           </div>
         </div>
 
         <div className="singleCustomer flex">
-          <img src={user2} alt="Customer Image" />
+          <img src={user1} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Gilbert Hutapea</span>
-            <small>Ordered a new plant</small>
+            <span className="name">Session 3</span>
+            <small>View Details {'>>>'}</small>
           </div>
           <div className="duration">
-            2 min ago
+            1 day ago
           </div>
         </div>
 
         <div className="singleCustomer flex">
-          <img src={user3} alt="Customer Image" />
+          <img src={user1} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Gilbert Hutapea</span>
-            <small>Ordered a new plant</small>
+            <span className="name">Session 4</span>
+            <small>View Details {'>>>'}</small>
           </div>
           <div className="duration">
-            2 min ago
+            1day 10 hours ago
           </div>
         </div>
+
         <div className="singleCustomer flex">
-          <img src={user4} alt="Customer Image" />
+          <img src={user1} alt="Customer Image" />
           <div className="customerDetails">
-            <span className="name">Gilbert Hutapea</span>
-            <small>Ordered a new plant</small>
+            <span className="name">Session 5</span>
+            <small>View Details {'>>>'}</small>
           </div>
           <div className="duration">
-            2 min ago
+           2 days ago
           </div>
         </div>
       </div>
