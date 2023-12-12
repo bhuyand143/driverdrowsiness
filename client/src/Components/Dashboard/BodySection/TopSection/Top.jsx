@@ -78,7 +78,7 @@ const Top = () => {
 
               <div className="flex">
                 <span>
-                  Today <br /> <small>2 Sessions</small>
+                  Today <br /> <small>4 Sessions</small>
                 </span>
                 <span>
                   This Month <br /> <small>138 Sessions</small>

@@ -60,7 +60,7 @@ const Activity = () => {
             <small>View Details {'>>>'}</small>
           </div>
           <div className="duration">
-            1day 10 hours ago
+            1 day 10 hours ago
           </div>
         </div>
 
