@@ -4,7 +4,7 @@ const Session = require('../model/Session');
 router.get('/',async(req,res)=>{
     try {
         const session = await Session.find();
-       res.status(200).json(session);
+       res.status(200).json(session.reverse());
    } catch (error) {
       res.status(500).json(error);
    }
