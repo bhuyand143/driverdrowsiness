@@ -4,11 +4,17 @@ import { BiSearchAlt } from 'react-icons/bi'
 import { TbMessageCircle } from 'react-icons/tb'
 import { MdOutlineNotificationsNone } from 'react-icons/md'
 import { BsArrowRightShort, BsQuestionCircle } from 'react-icons/bs'
-import img from '../../../../Assets/gilbert.jpg'
+import img from '../../../../Assets/saksham.jpg'
 import img2 from '../../../../Assets/images (2).png'
 import video from '../../../../Assets/video.mp4'
+import axios from 'axios'
 import image from '../../../../Assets/drows.png'
 const Top = () => {
+  const handleStart = (e)=>{
+    
+      e.preventDefault()
+      axios.get('http://localhost:8800/api/auth/run')
+  }
   return (
     <div className="topSection">
       <div className="headerSection flex">
@@ -39,7 +45,7 @@ const Top = () => {
           <p>The world's fast growing industry today are natural made products!</p>
 
           <div className="buttons flex">
-            <button className="btn">Start!</button>
+            <button className="btn" onClick={handleStart}>Start!</button>
             {/* <button className="btn transparent">Start</button> */}
           </div>
 

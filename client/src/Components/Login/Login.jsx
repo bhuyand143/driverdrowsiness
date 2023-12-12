@@ -55,8 +55,8 @@ const Login = () => {
             <div className="container flex">
 
                 <div className="videoDiv">
-                    {/* <video src={video} autoPlay muted loop></video> */}
-                    <img src={image}  alt="Driver Drowsiness Detection"/>
+                    <video src={video} autoPlay muted loop></video>
+                    {/* <img src={image}  alt="Driver Drowsiness Detection"/> */}
                     <div className="textDiv">
                         <h2 className="title">Driver Drowsiness Detection & Alert System</h2>
                     </div>

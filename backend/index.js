@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 // const helmet = require('helmet')
 const dotenv = require('dotenv')
 const authRoute = require('./routes/auth');
+const sessionRoute = require('./routes/session');
 // const morgan = require('morgan')
 // const userRoute = require('./routes/users')
 // const authRoute = require('./routes/auth')
@@ -22,6 +23,7 @@ mongoose.connect(process.env.MONGO_URL)
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth",authRoute);
+app.use("/api/session",sessionRoute);
 
 
 app.listen(8800,()=>{

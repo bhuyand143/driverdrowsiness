@@ -38,8 +38,8 @@ const Register = () => {
             <div className="container flex">
 
                 <div className="videoDiv">
-                    {/* <video src={video} autoPlay muted loop></video> */}
-                    <img src={image} alt="Driver Drowsiness System" />
+                    <video src={video} autoPlay muted loop></video>
+                    {/* <img src={image} alt="Driver Drowsiness System" /> */}
                     <div className="textDiv">
                         <h2 className="title">Driver Drowsiness Detection & Alert System</h2>
                     </div>

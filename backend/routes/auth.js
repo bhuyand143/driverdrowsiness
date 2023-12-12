@@ -1,6 +1,7 @@
 const router = require("express").Router()
 const User = require('../model/User');
 const bcrypt = require('bcrypt')
+let {PythonShell} = require('python-shell')
 
 //Register
 router.post('/register', async (req, res) => {
@@ -45,4 +46,15 @@ router.post('/login', async (req, res) => {
         return res.status(500).json(err)
     }
 })
+
+//Start a session
+router.get('/run',async(req,res)=>{
+    PythonShell.run("C:/Users/Saksham Hans/PycharmProjects/Driver Drowsiness/main.py",null,(err,result)=>{
+        res.status(200).json("Session Started")
+    })
+    res.status(200).json("Session Started")
+})
+
+
+
 module.exports = router
