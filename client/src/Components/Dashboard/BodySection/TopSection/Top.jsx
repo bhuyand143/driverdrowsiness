@@ -9,11 +9,26 @@ import car from '../../../../Assets/dibyajyoticar.png'
 import video from '../../../../Assets/video.mp4'
 import axios from 'axios'
 import image from '../../../../Assets/drows.png'
+
+function createData(eyes_closed,mouth_open, status) {
+  eyes_closed=Math.floor(Math.random() * 25);
+  mouth_open=Math.floor(Math.random() * 25);
+  status=(eyes_closed>15 || mouth_open>15)==1?'Drowsy':'Not Drowsy';
+  return { eyes_closed, mouth_open, status};
+}
 const Top = () => {
   const handleStart = (e)=>{
     
       e.preventDefault()
+      try
+      {
       axios.get('http://localhost:8800/api/auth/run')
+      const val = createData()
+      axios.post('http://localhost:8800/api/session',val)
+      }catch(error)
+      {
+        console.log(error)
+      }
   }
   return (
     <div className="topSection">
