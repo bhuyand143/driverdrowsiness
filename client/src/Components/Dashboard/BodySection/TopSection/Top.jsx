@@ -35,12 +35,12 @@ const Top = () => {
 
       <div className="cardSection flex">
         <div className="rightCard flex">
-          <h1>Your records!</h1>
+          <h1>Start a Session!</h1>
           <p>The world's fast growing industry today are natural made products!</p>
 
           <div className="buttons flex">
-            <button className="btn">Explore More</button>
-            <button className="btn transparent">Top Sellers</button>
+            <button className="btn">Start!</button>
+            {/* <button className="btn transparent">Start</button> */}
           </div>
 
           <div className="videoDiv">
@@ -52,7 +52,7 @@ const Top = () => {
           <div className="main flex">
 
             <div className="textDiv">
-              <h1>My Stat</h1>
+              <h1>Your Stat</h1>
 
               <div className="flex">
                 <span>
@@ -64,7 +64,7 @@ const Top = () => {
               </div>
 
               <span className="flex link">
-                Go to my orders <BsArrowRightShort className="icon" />
+                Go to my sessions <BsArrowRightShort className="icon" />
               </span>
             </div>
 
