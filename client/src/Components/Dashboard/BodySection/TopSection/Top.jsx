@@ -8,7 +8,7 @@ import img from '../../../../Assets/saksham.jpg'
 import img2 from '../../../../Assets/images (2).png'
 import video from '../../../../Assets/video.mp4'
 import axios from 'axios'
-
+import image from '../../../../Assets/drows.png'
 const Top = () => {
   const handleStart = (e)=>{
     
@@ -50,7 +50,8 @@ const Top = () => {
           </div>
 
           <div className="videoDiv">
-            <video src={video} autoPlay loop muted></video>
+            {/* <video src={video} autoPlay loop muted></video> */}
+            <img src={image} alt="drowsy" />
           </div>
         </div>
 
