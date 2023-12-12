@@ -57,10 +57,10 @@ const Top = () => {
 
               <div className="flex">
                 <span>
-                  Today <br /> <small>4 Orders</small>
+                  Today <br /> <small>4 Sessions</small>
                 </span>
                 <span>
-                  This Month <br /> <small>175 Orders</small>
+                  This Month <br /> <small>175 Sessions</small>
                 </span>
               </div>
 
