@@ -21,9 +21,9 @@ const Login = () => {
 
     const loginUser = (e) => {
         e.preventDefault();
-        Axios.post('http://localhost:3002/login', {
-            LoginUserName: loginUserName,
-            LoginPassword: loginPassword
+        Axios.post('http://localhost:8800/api/auth/login', {
+            username: loginUserName,
+            password: loginPassword
         }).then((response) => {
             console.log();
             if (response.data.message || loginUserName == '' || loginPassword ==  '') {

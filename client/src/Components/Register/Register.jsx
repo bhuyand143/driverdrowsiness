@@ -21,10 +21,10 @@ const Register = () => {
 
     const createUser = (e) => {
         e.preventDefault()
-        Axios.post('http://localhost:3002/register', {
-            Email: email,
-            UserName: userName,
-            Password: password
+        Axios.post('http://localhost:8800/api/auth/register', {
+            email: email,
+            username: userName,
+            password: password
         }).then(() => {
             navigateTo('/');
             setEmail('');
